@@ -55,7 +55,8 @@ public class BookController : ControllerBase
         return Ok(books);
     }
 
-    [HttpPut("/update")]
+    [HttpPut]
+    [Route("update/{id}")]
     [ProducesResponseType(StatusCodes.Status204NoContent)]
     public IActionResult Update([FromBody] RequestUpdateBookJson request) 
     {
